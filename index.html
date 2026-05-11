@@ -1,24 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K&J Chesti Builders&Contractors</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-.section {
-  padding: 60px 20px;
-  text-align: center;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K&J Chesti Builders</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background: #0f172a;
   color: white;
+  scroll-behavior: smooth;
 }
 
-.section h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body { padding-top: 80px; }
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 45px;
+  margin-right: 10px;
+}
+
+.navbar h1 {
+  font-size: 18px;
   color: #fbbf24;
 }
 
+.navbar nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar nav a:hover {
+  color: #fbbf24;
+}
+
+/* ================= HERO SLIDER ================= */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(55%);
+}
+
+.caption {
+  position: absolute;
+  bottom: 25%;
+  left: 8%;
+}
+
+.caption h2 {
+  font-size: 40px;
+  color: #fbbf24;
+}
+
+.caption p {
+  font-size: 18px;
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  color: #fbbf24;
+  margin-bottom: 30px;
+}
+
+/* ================= GRID CARDS ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -30,126 +121,152 @@
 .card {
   background: #1e293b;
   padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  border-radius: 14px;
   transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
   background: #111827;
 }
 
+/* ================= TEAM IMAGES ================= */
 .card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border: 2px solid #fbbf24;
 }
 
 .card h3 {
-  margin: 10px 0 5px;
+  margin: 5px 0;
 }
 
 .card p {
   color: #94a3b8;
-  margin: 0;
 }
 
 .card span {
-  display: block;
-  margin-top: 8px;
+  font-size: 13px;
   color: #cbd5e1;
-  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #111827;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #9ca3af;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 26px;
+  padding: 14px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 </style>
 </head>
+
 <body>
-  <header class="hero">
-    <nav class="nav">
-      <div class="logo">K&J Chesti Builders</div>
-      <div class="menu">
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <h1>Building Dreams with Quality & Trust</h1>
-      <p>Construction, Renovation, Interior Design and Property Services Across Pakistan.</p>
-      <a class="btn" href="https://wa.me/923299922200">Get Free Quote</a>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png">
+    <h1>K&J Chesti Builders</h1>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#team">Team</a>
+    <a href="#stats">Stats</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero" id="home">
+
+  <div class="slide active">
+    <img src="slide1.jpg">
+    <div class="caption">
+      <h2>Luxury Construction Solutions</h2>
+      <p>We build strong modern homes</p>
     </div>
-  </header>
+  </div>
 
-  <section class="stats">
-    <div><h2>25+</h2><p>Years Experience</p></div>
-    <div><h2>150+</h2><p>Projects Completed</p></div>
-    <div><h2>150+</h2><p>Happy Clients</p></div>
-  </section>
+  <div class="slide">
+    <img src="slide2.jpg">
+    <div class="caption">
+      <h2>Engineering Excellence</h2>
+      <p>Quality you can trust</p>
+    </div>
+  </div>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card"><h3>Construction</h3><p>Residential and commercial building services.</p></div>
-      <div class="card"><h3>Renovation</h3><p>Modern refurbishment and remodeling solutions.</p></div>
-      <div class="card"><h3>Interior Design</h3><p>Elegant and functional interior spaces.</p></div>
-      <div class="card"><h3>Approvals</h3><p>DHA and authority approval assistance.</p></div>
-      <div class="card">Architecture</div>
-      <div class="card">Real Estate</div>
-      <div class="card">Project Management</div>
-      </div>
-</section><section class="section" id="projects">
-<h2>Projects</h2>
-<div class="grid">
-<div class="card">L33 DHA Phase 8</div>
-<div class="card">Shalamar Town Houses</div>
-<div class="card">Falettis Express Hotel</div>
-<div class="card">House 138A Eden City</div>
-<div class="card">House 123V DHA Phase 8</div>
-<div class="card">Subh-e-Noor Initiative</div>
-<div class="card">Barkat Market Renovation</div>
-<div class="card">Golding Road Hotel (Ongoing)</div>
-</div>
-</section><section class="section gallery" id="gallery">
-<h2>Gallery</h2>
-<div class="grid">
-<div class="item"><img src="project1.jpg"><p>Shalamar Town Houses</p></div>
-<div class="item"><img src="project2.jpg"><p>Barkat Market Renovation</p></div>
-<div class="item"><img src="project3.jpg"><p>L33 Commercial</p></div>
-<div class="item"><img src="project5.jpg"><p>House 138A Eden City</p></div>
-<div class="item"><img src="project6.jpg"><p>House 123V DHA Phase 8</p></div>
-<div class="item"><img src="project7.jpg"><p>Subh-e-Noor Initiative</p></div>
-</div>
+  <div class="slide">
+    <img src="slide3.jpg">
+    <div class="caption">
+      <h2>Architectural Masterpieces</h2>
+      <p>Designing dreams into reality</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">🏗️ Construction</div>
+    <div class="card">🏠 Home Building</div>
+    <div class="card">🧱 Renovation</div>
+    <div class="card">🎨 Interior Design</div>
+  </div>
+</section>
+
+<!-- TEAM -->
 <section class="section" id="team">
-  <h2>Our Professional Team</h2>
-
+  <h2>Our Team</h2>
   <div class="grid">
 
     <div class="card">
-      <img src="ceo.jpg" alt="CEO Khurram Majeed">
+      <img src="ceo.jpg">
       <h3>Khurram Majeed</h3>
       <p>CEO</p>
       <span>0322-2334488</span>
     </div>
 
     <div class="card">
-      <img src="usman.jpg" alt="Usman Saboor">
+      <img src="usman.jpg">
       <h3>Usman Saboor</h3>
-      <p>Project Manager</p>
+      <p>Manager</p>
       <span>0323-8400999</span>
     </div>
 
     <div class="card">
-      <img src="abubakar.jpg" alt="Abubakar Khan">
+      <img src="abubakar.jpg">
       <h3>Abubakar Khan</h3>
-      <p>Site Engineer</p>
+      <p>Engineer</p>
       <span>0323-4540454</span>
     </div>
 
     <div class="card">
-      <img src="zia.jpg" alt="Zia Shah">
+      <img src="zia.jpg">
       <h3>Zia Shah</h3>
       <p>Supervisor</p>
       <span>0322-6962272</span>
@@ -157,53 +274,96 @@
 
   </div>
 </section>
-</div>
-</section><section class="section" id="contact">
-<h2>Contact</h2>
-<form>
-<input type="text" placeholder="Name">
-<input type="email" placeholder="Email">
-<textarea placeholder="Message"></textarea>
-<button>Send</button>
-</form>
-</section><a href="https://wa.me/923222334488?text=Hello%20I%20need%20construction%20service" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
 
+<!-- STATS -->
+<section class="section" id="stats">
+  <h2>Our Achievements</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h1 class="counter" data-target="150">0</h1>
+      <p>Projects</p>
+    </div>
+
+    <div class="card">
+      <h1 class="counter" data-target="120">0</h1>
+      <p>Clients</p>
+    </div>
+
+    <div class="card">
+      <h1 class="counter" data-target="10">0</h1>
+      <p>Years</p>
+    </div>
+
+    <div class="card">
+      <h1 class="counter" data-target="25">0</h1>
+      <p>Staff</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="section">
+  <h2>Our Location</h2>
+
+  <iframe width="90%" height="350"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2sPakistan"
+    style="border:0; border-radius:12px;">
+  </iframe>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>📞 0322-2334488 | 0323-8400999</p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-<p>© 2026 K&J Builders & Contractors</p>
-</footer><script>
-window.onload=function(){document.getElementById('loader').style.display='none';}
+  © 2026 K&J Chesti Builders | All Rights Reserved
+</footer>
 
-let images=["project1.jpg","project2.jpg","project3.jpg","project4.jpg"];
-let i=0;
-setInterval(function(){
- i++;
- if(i>=images.length){i=0;}
- document.getElementById("slide").src=images[i];
-},3000);
-</script></body>
-</html>
-  <section class="section testimonials">
-    <h2>What Clients Say</h2>
-    <blockquote>“Outstanding workmanship and timely delivery.”</blockquote>
-    <blockquote>“Professional, honest and highly recommended.”</blockquote>
-  </section>
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/923222334488">💬</a>
 
-  <section id="contact" class="section contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> 0329-9922200</p>
-     <p><strong>Phone:</strong> 0322-2334488</p>
-    <p><strong>Website:</strong> kjchestibuilders.com</p>
-    <a class="btn" href="https://wa.me/923299922200">Chat on WhatsApp</a>
-  </section>
-<a class="btn" href="https://wa.me/923222334488">Chat on WhatsApp</a>
-  </section>
+<!-- SLIDER -->
+<script>
+let slides = document.querySelectorAll(".slide");
+let i = 0;
 
+setInterval(() => {
+  slides.forEach(s => s.classList.remove("active"));
+  i = (i + 1) % slides.length;
+  slides[i].classList.add("active");
+}, 4000);
+</script>
 
-  <footer>
-    <p>© 2026 K&J Chesti Builders. All Rights Reserved.</p>
-  </footer>
+<!-- COUNTER -->
+<script>
+const counters = document.querySelectorAll('.counter');
 
-  <a class="whatsapp" href="https://wa.me/923299922200">WhatsApp</a>
-  <script src="script.js"></script>
+counters.forEach(counter => {
+  counter.innerText = "0";
+
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+
+    const inc = target / 100;
+
+    if(current < target) {
+      counter.innerText = Math.ceil(current + inc);
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+
+  update();
+});
+</script>
+
 </body>
 </html>
