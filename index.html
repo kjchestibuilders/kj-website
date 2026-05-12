@@ -102,8 +102,8 @@ width:90px;
 height:90px;
 border-radius:50%;
 object-fit:cover;
-border:2px solid #d4af37;
-box-shadow:0 0 25px rgba(212,175,55,0.5);
+border:3px solid #d4af37;
+box-shadow:0 0 35px rgba(212,175,55,0.7);
 background:white;
 }
 
@@ -166,33 +166,37 @@ HERO
 ========================================================= */
 
 .hero{
-min-height:92vh;
+min-height:100vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-padding:80px 7% 30px;
+padding:90px 5% 30px;
 position:relative;
 overflow:hidden;
 }
 
 .hero-content{
-max-width:950px;
+max-width:1000px;
+width:100%;
+margin:auto;
+z-index:2;
 animation:fadeUp 1.5s ease;
 }
 
 .hero-tag{
 display:inline-block;
-padding:16px 34px;
-border-radius:50px;
+padding:18px 38px;
+border-radius:60px;
 background:rgba(212,175,55,0.12);
-border:1px solid rgba(212,175,55,0.3);
+border:1px solid rgba(212,175,55,0.4);
 color:#d4af37;
-font-size:22px;
+font-size:24px;
 font-weight:700;
 letter-spacing:2px;
 margin-bottom:20px;
-text-transform:uppercase;
+text-align:center;
+box-shadow:0 10px 30px rgba(212,175,55,0.15);
 }
 
 .hero p{
@@ -276,14 +280,13 @@ SECTION
 ========================================================= */
 
 .section{
-padding:80px 7%;
+padding:80px 5%;
 }
 
 .section-title{
 text-align:center;
 margin-bottom:45px;
 }
-
 .section-title span{
 color:#d4af37;
 letter-spacing:2px;
@@ -524,12 +527,12 @@ FOOTER
 ========================================================= */
 
 footer{
-padding:25px 7%;
+padding:20px 5%;
 border-top:1px solid rgba(255,255,255,0.08);
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
-gap:20px;
+gap:10px;
 }
 
 footer p{
@@ -756,6 +759,10 @@ View Projects
 
 <!-- PROJECTS -->
 
+<!-- =====================================================
+PROJECTS
+===================================================== -->
+
 <section id="projects" class="section">
 
 <div class="section-title">
@@ -765,30 +772,7 @@ View Projects
 
 <div class="projects-grid">
 
-<div class="project-card">
-<img src="project4.jpg">
-<div class="project-overlay">
-<h3>Modern House Eden City</h3>
-<p>Modern Luxury House</p>
-</div>
-</div>
-
-<div class="project-card">
-<img src="project5.jpg">
-<div class="project-overlay">
-<h3>Spanish House DHA Phase 8</h3>
-<p>Contemporary Residential Project</p>
-</div>
-</div>
-
-<div class="project-card">
-<img src="project2.jpg">
-<div class="project-overlay">
-<h3>Shalamar Town Houses</h3>
-<p>Premium Town House Development</p>
-</div>
-</div>
-
+<!-- PROJECT 1 -->
 <div class="project-card">
 <img src="project1.jpg">
 <div class="project-overlay">
@@ -797,11 +781,79 @@ View Projects
 </div>
 </div>
 
+<!-- PROJECT 2 -->
+<div class="project-card">
+<img src="project2.jpg">
+<div class="project-overlay">
+<h3>Shalamar Town Houses</h3>
+<p>Premium Town House Development</p>
+</div>
+</div>
+
+<!-- PROJECT 3 -->
+<div class="project-card">
+<img src="project3.jpg">
+<div class="project-overlay">
+<h3>Falettis Express Hotel</h3>
+<p>Luxury Hospitality Project</p>
+</div>
+</div>
+
+<!-- PROJECT 4 -->
+<div class="project-card">
+<img src="project4.jpg">
+<div class="project-overlay">
+<h3>Modern House Eden City</h3>
+<p>Modern Luxury Residential House</p>
+</div>
+</div>
+
+<!-- PROJECT 5 -->
+<div class="project-card">
+<img src="project5.jpg">
+<div class="project-overlay">
+<h3>Spanish House DHA Phase 8</h3>
+<p>Contemporary Residential Project</p>
+</div>
+</div>
+
+<!-- PROJECT 6 -->
+<div class="project-card">
+<img src="project6.jpg">
+<div class="project-overlay">
+<h3>Subh-e-Noor Social Initiative</h3>
+<p>Community Development Project</p>
+</div>
+</div>
+
+<!-- PROJECT 7 -->
+<div class="project-card">
+<img src="project7.jpg">
+<div class="project-overlay">
+<h3>Barkat Market Renovation</h3>
+<p>Commercial Renovation Project</p>
+</div>
+</div>
+
+<!-- PROJECT 8 -->
+<div class="project-card">
+<img src="project8.jpg">
+<div class="project-overlay">
+<h3>Golding Road Luxury Apartments</h3>
+<p>Luxury Apartments Construction (Ongoing)</p>
+</div>
+</div>
+
 </div>
 
 </section>
+</section>
 
 <!-- TEAM -->
+
+<!-- =====================================================
+TEAM
+===================================================== -->
 
 <section id="team" class="section">
 
@@ -812,20 +864,23 @@ View Projects
 
 <div class="team-grid">
 
+<!-- MEMBER 1 -->
 <div class="team-card">
 <img src="ceo.jpg">
 <h3>Khurram Majeed</h3>
-<p>CEO & Procurement Manager</p>
+<p>Payment & Procurement Manager / CEO</p>
 <span>0322-2334488</span>
 </div>
 
+<!-- MEMBER 2 -->
 <div class="team-card">
 <img src="usman.jpg">
 <h3>Usman Saboor</h3>
-<p>Cost & Project Management</p>
+<p>Cost & Project Management Manager</p>
 <span>0323-8400999</span>
 </div>
 
+<!-- MEMBER 3 -->
 <div class="team-card">
 <img src="abubakar.jpg">
 <h3>Abubakar Khan</h3>
@@ -833,6 +888,23 @@ View Projects
 <span>0323-4540454</span>
 </div>
 
+<!-- MEMBER 4 -->
+<div class="team-card">
+<img src="zia.jpg">
+<h3>Zia Shah</h3>
+<p>Real Estate Agent (Residential & Commercial)</p>
+<span>0322-6962272</span>
+</div>
+
+<!-- MEMBER 5 -->
+<div class="team-card">
+<img src="raza.jpg">
+<h3>Muhammad Raza Advocate</h3>
+<p>Legal & Account Manager</p>
+<span>0322-5121222</span>
+</div>
+
+<!-- MEMBER 6 -->
 <div class="team-card">
 <img src="arslan.jpg">
 <h3>Muhammad Arslan</h3>
@@ -842,6 +914,7 @@ View Projects
 
 </div>
 
+</section>
 </section>
 
 <!-- LOCATION -->
