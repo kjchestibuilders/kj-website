@@ -9,16 +9,13 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- GOOGLE FONT -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<!-- FONT AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
-
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
@@ -38,104 +35,93 @@ radial-gradient(circle at bottom right, rgba(212,175,55,0.10), transparent 30%);
 z-index:-2;
 }
 
-.hero-bg{position:fixed;top:0;left:0;width:100%;height:100%;background:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1974&auto=format&fit=crop') center/cover;opacity:0.12;z-index:-3;}
-
-.navbar{
-position:fixed;top:0;left:0;width:100%;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;z-index:1000;backdrop-filter:blur(20px);background:rgba(0,0,0,0.35);border-bottom:1px solid rgba(255,255,255,0.08);
+.hero-bg{
+position:fixed;top:0;left:0;width:100%;height:100%;
+background:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1974&auto=format&fit=crop') center/cover;
+opacity:0.12;z-index:-3;
 }
 
-.nav-left{width:220px;display:flex;align-items:center;}
+/* NAVBAR */
+.navbar{
+position:fixed;top:0;left:0;width:100%;padding:10px 5%;display:flex;align-items:center;justify-content:space-between;z-index:1000;
+backdrop-filter:blur(20px);background:rgba(0,0,0,0.35);border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
 .logo{width:90px;height:90px;border-radius:50%;object-fit:cover;border:3px solid #d4af37;box-shadow:0 0 35px rgba(212,175,55,0.7);background:white;}
 
 .nav-center{position:absolute;left:50%;transform:translateX(-50%);text-align:center;}
-.nav-center h2{font-size:30px;font-weight:700;color:#d4af37;white-space:nowrap;}
-.nav-center p{font-size:12px;letter-spacing:5px;color:white;margin-top:4px;}
+.nav-center h2{font-size:30px;color:#d4af37;white-space:nowrap;}
+.nav-center p{font-size:12px;letter-spacing:5px;}
 
 .nav-links{display:flex;gap:28px;}
-.nav-links a{color:white;text-decoration:none;font-size:14px;font-weight:500;position:relative;}
-.nav-links a::after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#d4af37;transition:0.4s;}
+.nav-links a{color:white;text-decoration:none;transition:0.3s;}
 .nav-links a:hover{color:#d4af37;}
-.nav-links a:hover::after{width:100%;}
 
-.hero{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:90px 5% 30px;position:relative;}
-.hero-content{max-width:1000px;margin:auto;}
-.hero-tag{display:inline-block;padding:18px 38px;border-radius:60px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.4);color:#d4af37;font-size:24px;font-weight:700;}
-.hero p{font-size:20px;line-height:1.9;color:#d1d5db;margin:0 auto 30px;max-width:850px;}
-.hero-buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
-.btn{padding:16px 35px;border-radius:50px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:10px;}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 5% 40px;}
+.hero-content{max-width:1000px;}
+.hero-tag{display:inline-block;padding:18px 38px;border-radius:60px;background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.4);color:#d4af37;font-size:24px;margin-bottom:20px;}
+.hero p{font-size:20px;line-height:1.8;color:#d1d5db;margin-bottom:30px;}
+
+.btn{padding:16px 35px;border-radius:50px;text-decoration:none;font-weight:600;}
 .btn-gold{background:linear-gradient(135deg,#d4af37,#f7d774);color:black;}
-.btn-dark{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:white;}
+.btn-dark{background:rgba(255,255,255,0.05);color:white;border:1px solid rgba(255,255,255,0.1);}
 
 .section{padding:80px 5%;}
 .section-title{text-align:center;margin-bottom:45px;}
-.section-title span{color:#d4af37;font-size:13px;letter-spacing:2px;}
-.section-title h2{font-size:52px;margin-top:10px;}
+.section-title span{color:#d4af37;}
+.section-title h2{font-size:52px;}
 
 .services-grid,.projects-grid,.team-grid{display:grid;gap:22px;}
 .services-grid{grid-template-columns:repeat(auto-fit,minmax(270px,1fr));}
-.projects-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));}
+.projects-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
 .team-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
 
-.service-card,.team-card{background:rgba(255,255,255,0.05);padding:30px;border-radius:30px;border:1px solid rgba(255,255,255,0.08);transition:0.5s;}
-.service-card:hover,.team-card:hover{transform:translateY(-10px);border-color:#d4af37;}
+.service-card,.team-card,.contact-box,.location-box{background:rgba(255,255,255,0.05);padding:30px;border-radius:25px;border:1px solid rgba(255,255,255,0.08);}
 
-.project-card{height:390px;border-radius:30px;overflow:hidden;position:relative;}
-.project-card img{width:100%;height:100%;object-fit:cover;transition:0.7s;}
-.project-card:hover img{transform:scale(1.1);}
-.project-overlay{position:absolute;bottom:0;width:100%;padding:30px;background:linear-gradient(to top,rgba(0,0,0,0.95),transparent);}
+.project-card{height:380px;border-radius:25px;overflow:hidden;position:relative;}
+.project-card img{width:100%;height:100%;object-fit:cover;}
+.project-overlay{position:absolute;bottom:0;width:100%;padding:25px;background:linear-gradient(to top,rgba(0,0,0,0.9),transparent);}
 
-.team-card img{width:140px;height:140px;border-radius:50%;border:3px solid #d4af37;margin-bottom:20px;object-fit:cover;}
-
-.location-box,.contact-box{background:rgba(255,255,255,0.05);padding:35px;border-radius:30px;border:1px solid rgba(255,255,255,0.08);}
+.team-card img{width:120px;height:120px;border-radius:50%;border:3px solid #d4af37;margin-bottom:15px;object-fit:cover;}
 
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;}
+input,textarea{width:100%;padding:14px;border-radius:12px;border:none;outline:none;background:#111827;color:white;margin-bottom:10px;}
+textarea{height:130px;resize:none;}
 
-input,textarea{width:100%;padding:16px;border-radius:14px;border:none;outline:none;background:#111827;color:white;}
-textarea{height:140px;resize:none;}
+footer{padding:20px 5%;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.1);}
 
-footer{padding:20px 5%;display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);flex-wrap:wrap;}
+.whatsapp{position:fixed;bottom:25px;right:25px;width:70px;height:70px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:30px;color:white;}
 
-.whatsapp{position:fixed;bottom:25px;right:25px;width:70px;height:70px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:30px;}
-
-/* PREMIUM MOBILE RESPONSIVE */
+/* RESPONSIVE */
 @media(max-width:1000px){
-.navbar{padding:12px 4%;height:85px;}
-.logo{width:58px;height:58px;}
-.nav-center h2{font-size:20px;white-space:normal;max-width:280px;}
-.nav-center p{font-size:9px;}
 .nav-links{display:none;}
-.hero{padding:95px 5% 40px;}
+.nav-center h2{font-size:20px;}
+.hero-tag{font-size:18px;}
+.hero p{font-size:16px;}
 .section-title h2{font-size:34px;}
 .projects-grid,.team-grid{grid-template-columns:1fr;}
-.hero p{font-size:16px;}
-.hero-tag{font-size:18px;}
 }
 
 @media(max-width:600px){
-.logo{width:52px;height:52px;}
+.logo{width:55px;height:55px;}
 .nav-center h2{font-size:16px;}
-.hero-tag{font-size:15px;}
 .section-title h2{font-size:28px;}
-.project-card{height:280px;}
+.project-card{height:260px;}
 }
 
 </style>
 </head>
 
 <body>
-
 <div class="hero-bg"></div>
 
 <nav class="navbar">
-<div class="nav-left">
 <img src="logo.png" class="logo">
-</div>
-
 <div class="nav-center">
 <h2>K&J Chesti Builders & Contractors</h2>
 <p>INTERNATIONAL</p>
 </div>
-
 <div class="nav-links">
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
@@ -148,33 +134,27 @@ footer{padding:20px 5%;display:flex;justify-content:space-between;border-top:1px
 <section class="hero">
 <div class="hero-content">
 <div class="hero-tag">Reliable Construction Company In Lahore</div>
-<p>K&J Chesti Builders delivers luxury construction, villas, hotels, commercial projects and interiors.</p>
-
-<div class="hero-buttons">
-<a href="https://wa.me/923299922200" class="btn btn-gold"><i class="fa-brands fa-whatsapp"></i>Get Free Consultation</a>
-<a href="#projects" class="btn btn-dark">View Projects</a>
-</div>
+<p>Luxury construction, villas, hotels, commercial projects and interiors with premium quality and modern design.</p>
+<a href="https://wa.me/923299922200" class="btn btn-gold">WhatsApp Consultation</a>
 </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="section">
-<div class="section-title"><span>OUR SERVICES</span><h2>Reliable Construction Solutions</h2></div>
+<div class="section-title"><span>SERVICES</span><h2>What We Do</h2></div>
 <div class="services-grid">
-<div class="service-card"><h3>Commercial Construction</h3><p>Luxury offices, plazas and hotels.</p></div>
-<div class="service-card"><h3>Luxury Villas</h3><p>Modern residential architecture.</p></div>
-<div class="service-card"><h3>Interior Design</h3><p>Premium finishing and renovation.</p></div>
-<div class="service-card"><h3>Renovation</h3><p>Transforming old spaces.</p></div>
+<div class="service-card">Commercial Construction</div>
+<div class="service-card">Luxury Villas</div>
+<div class="service-card">Interior Design</div>
+<div class="service-card">Renovation</div>
 </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="section">
-<div class="section-title"><span>PORTFOLIO</span><h2>Our Projects</h2></div>
+<div class="section-title"><span>PROJECTS</span><h2>Our Work</h2></div>
 <div class="projects-grid">
 <div class="project-card"><img src="project1.jpg"><div class="project-overlay"><h3>DHA Phase 8</h3></div></div>
 <div class="project-card"><img src="project2.jpg"><div class="project-overlay"><h3>Town Houses</h3></div></div>
-<div class="project-card"><img src="project3.jpg"><div class="project-overlay"><h3>Hotel Project</h3></div></div>
+<div class="project-card"><img src="project3.jpg"><div class="project-overlay"><h3>Hotel</h3></div></div>
 <div class="project-card"><img src="project4.jpg"><div class="project-overlay"><h3>Modern House</h3></div></div>
 <div class="project-card"><img src="project5.jpg"><div class="project-overlay"><h3>Spanish House</h3></div></div>
 <div class="project-card"><img src="project6.jpg"><div class="project-overlay"><h3>Social Project</h3></div></div>
@@ -183,32 +163,33 @@ footer{padding:20px 5%;display:flex;justify-content:space-between;border-top:1px
 </div>
 </section>
 
-<!-- TEAM -->
 <section id="team" class="section">
 <div class="section-title"><span>TEAM</span><h2>Leadership</h2></div>
 <div class="team-grid">
-<div class="team-card"><img src="ceo.jpg"><h3>Khurram Majeed</h3><span>CEO</span></div>
-<div class="team-card"><img src="usman.jpg"><h3>Usman Saboor</h3><span>Manager</span></div>
-<div class="team-card"><img src="abubakar.jpg"><h3>Abubakar Khan</h3><span>Design</span></div>
-<div class="team-card"><img src="zia.jpg"><h3>Zia Shah</h3><span>Agent</span></div>
-<div class="team-card"><img src="raza.jpg"><h3>Muhammad Raza</h3><span>Legal</span></div>
-<div class="team-card"><img src="arslan.jpg"><h3>Muhammad Arslan</h3><span>Architect</span></div>
+<div class="team-card"><img src="ceo.jpg"><h3>Khurram Majeed</h3><p>CEO</p><span>0322-2334488</span></div>
+<div class="team-card"><img src="usman.jpg"><h3>Usman Saboor</h3><p>Manager</p><span>0323-8400999</span></div>
+<div class="team-card"><img src="abubakar.jpg"><h3>Abubakar Khan</h3><p>Design</p><span>0323-4540454</span></div>
+<div class="team-card"><img src="zia.jpg"><h3>Zia Shah</h3><p>Agent</p><span>0322-6962272</span></div>
+<div class="team-card"><img src="raza.jpg"><h3>Muhammad Raza</h3><p>Legal</p><span>0322-5121222</span></div>
+<div class="team-card"><img src="arslan.jpg"><h3>Muhammad Arslan</h3><p>Architect</p><span>0320-4319470</span></div>
 </div>
 </section>
 
-<!-- LOCATION -->
 <section id="location" class="section">
 <div class="section-title"><span>LOCATION</span><h2>Office</h2></div>
 <div class="location-box">
-<p>DHA Phase 8 Lahore Cantt</p>
+<p>L33 2nd Floor, DHA Phase 8 Lahore Cantt</p>
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
 <div class="section-title"><span>CONTACT</span><h2>Get in Touch</h2></div>
 <div class="contact-grid">
-<div class="contact-box"><p>Email: kjchestibuilders@gmail.com</p><p>Phone: 0322-2334488</p></div>
+<div class="contact-box">
+<p>Email: kjchestibuilders@gmail.com</p>
+<p>Phone: 0322-2334488</p>
+<p>WhatsApp: 0329-9922200</p>
+</div>
 <div class="contact-box">
 <form>
 <input placeholder="Name">
