@@ -79,20 +79,21 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:18px 7%;
+padding:18px 5%;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 z-index:1000;
 backdrop-filter:blur(20px);
 background:rgba(0,0,0,0.35);
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.logo-area{
+/* LEFT LOGO */
+.nav-left{
+width:220px;
 display:flex;
 align-items:center;
-gap:18px;
 }
 
 .logo{
@@ -105,31 +106,34 @@ box-shadow:0 0 25px rgba(212,175,55,0.5);
 background:white;
 }
 
-.logo-text{
-display:flex;
-flex-direction:column;
-justify-content:center;
+/* CENTER TEXT */
+.nav-center{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+text-align:center;
 }
 
-.logo-text h2{
-font-size:24px;
+.nav-center h2{
+font-size:28px;
 font-weight:700;
 color:#d4af37;
 line-height:1.2;
-margin:0;
+white-space:nowrap;
 }
 
-.logo-text p{
+.nav-center p{
 font-size:12px;
-letter-spacing:4px;
-color:#ffffff;
+letter-spacing:5px;
+color:white;
 margin-top:4px;
-text-transform:uppercase;
 }
 
+/* RIGHT MENU */
 .nav-links{
 display:flex;
 gap:30px;
+align-items:center;
 }
 
 .nav-links a{
@@ -160,6 +164,40 @@ color:#d4af37;
 width:100%;
 }
 
+/* MOBILE */
+@media(max-width:1000px){
+
+.nav-center h2{
+font-size:18px;
+}
+
+.nav-center p{
+font-size:10px;
+letter-spacing:2px;
+}
+
+.nav-links{
+display:none;
+}
+
+.logo{
+width:50px;
+height:50px;
+}
+
+}
+
+@media(max-width:600px){
+
+.nav-center h2{
+font-size:14px;
+}
+
+.nav-center p{
+font-size:8px;
+}
+
+}
 /* =========================================================
 HERO SECTION
 ========================================================= */
@@ -659,19 +697,18 @@ NAVBAR
 
 <nav class="navbar">
 
-<div class="logo-area">
-
+<!-- LEFT LOGO -->
+<div class="nav-left">
 <img src="logo.png" class="logo">
+</div>
 
-<div class="logo-text">
+<!-- CENTER COMPANY NAME -->
+<div class="nav-center">
 <h2>K&J Chesti Builders & Contractors</h2>
 <p>INTERNATIONAL</p>
 </div>
 
-</div>
-
-</div>
-
+<!-- RIGHT MENU -->
 <div class="nav-links">
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
